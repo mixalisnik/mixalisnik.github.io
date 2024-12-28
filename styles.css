@@ -523,6 +523,65 @@ footer p {
     transition: 0.3s;
 }
 
+#contact {
+    padding: 60px 20px;
+    text-align: center;
+    color: #00ffcc;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#contact .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    color: #00ffcc;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #00ffcc;
+    border-radius: 5px;
+    background-color: #121212;
+    color: #00ffcc;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff00ff;
+}
+.frm-btn {
+    padding: 10px 20px;
+    background-color: #00ffcc;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+
+.frm-btn:hover {
+    transform: scale(1.05);
+}
+
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex;
