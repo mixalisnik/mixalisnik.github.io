@@ -528,6 +528,10 @@ footer p {
         display: flex;
     }
 
+    #hero {
+        margin-top: 100px;
+    }
+
     nav ul {
         display: none;
         flex-direction: column;
