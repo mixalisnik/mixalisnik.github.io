@@ -143,4 +143,54 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById(target).classList.add('active');
         });
     });
+
+    // Command-line modal functionality
+    const buttons = document.querySelectorAll('.btn');
+    const modal = document.getElementById('cmd-modal');
+    const cmdOutput = document.getElementById('cmd-output');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            showCmdModal();
+        });
+    });
+
+    function showCmdModal() {
+        modal.style.display = 'block';
+        cmdOutput.innerHTML = 'Enter password: ';
+        simulatePasswordAttempts(1); // Simulate 2 failed attempts before success
+    }
+
+    function simulatePasswordAttempts(attempts) {
+        if (attempts > 0) {
+            setTimeout(() => {
+                cmdOutput.innerHTML += '********<br>';
+                setTimeout(() => {
+                    cmdOutput.innerHTML += '<span style="color: red;">Access Denied</span><br>';
+                    cmdOutput.innerHTML += 'Entering password: ';
+                    simulatePasswordAttempts(attempts - 1);
+                }, 1000);
+            }, 1000);
+        } else {
+            setTimeout(() => {
+                cmdOutput.innerHTML += '********<br>';
+                setTimeout(() => {
+                    cmdOutput.innerHTML += 'Access Granted';
+                    setTimeout(() => {
+                        modal.style.display = 'none';
+                        cmdOutput.innerHTML = '';
+                    }, 2000); // Close the modal after 2 seconds
+                }, 1000);
+            }, 1000);
+        }
+    }
+
+    // Close the modal when clicking outside of it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+            cmdOutput.innerHTML = '';
+        }
+    }
 });
