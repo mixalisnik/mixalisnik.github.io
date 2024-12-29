@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Typing effect for About section
-    const aboutText = "I am a software engineer, web designer, and consultant specializing in futuristic and cyberpunk themes. My passion lies in creating innovative solutions and visually stunning designs that push the boundaries of technology.";
+    const aboutText = "At NebulonForge, we are a team of visionary developers, consultants, cybersecurity experts, testers, and tech innovators. Driven by our passion for shaping the future, we excel at tackling complex digital challenges. With experience spanning global organizations, public institutions, and industry-leading enterprises, our diverse expertise enables us to deliver cutting-edge solutions tailored to your unique business needs.";
     const aboutDescription = document.getElementById('about-description');
     const typingCursor = document.getElementById('typing-cursor');
     let index = 0;
