@@ -640,3 +640,64 @@ footer p {
         transform: rotate(-45deg) translate(5px, -5px);
     }
 }
+
+#services {
+    padding: 60px 20px;
+    text-align: center;
+    color: #00ffcc;
+}
+
+#services .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.service-item {
+    background: #000;
+    border-left: 4px solid #00ffcc;
+    padding: 20px;
+    position: relative;
+    transition: background 0.3s, transform 0.3s;
+    text-align: left;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ff00ff;
+}
+
+.service-item p {
+    font-size: 1.2em;
+    color: #00ffcc;
+}
+
+/* New CSS for Bring a Friend Section */
+#bring-a-friend {
+    padding: 60px 20px;
+    text-align: center;
+    color: #00ffcc;
+}
+
+#bring-a-friend .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#bring-a-friend p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
