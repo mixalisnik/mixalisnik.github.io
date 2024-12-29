@@ -127,4 +127,20 @@ document.addEventListener('DOMContentLoaded', () => {
     projectItems.forEach(item => {
         projectObserver.observe(item);
     });
+
+    // Tabbed panel functionality for services section
+    const tabs = document.querySelectorAll('.tab');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = tab.getAttribute('data-tab');
+
+            tabs.forEach(t => t.classList.remove('active'));
+            tabContents.forEach(tc => tc.classList.remove('active'));
+
+            tab.classList.add('active');
+            document.getElementById(target).classList.add('active');
+        });
+    });
 });
