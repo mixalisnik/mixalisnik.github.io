@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showCmdModal() {
         modal.style.display = 'block';
-        cmdOutput.innerHTML = 'Enter password: ';
+        cmdOutput.innerHTML = 'Entering password: ';
         simulatePasswordAttempts(1); // Simulate 2 failed attempts before success
     }
 
