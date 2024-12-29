@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (index < aboutText.length) {
             aboutDescription.textContent += aboutText.charAt(index);
             index++;
-            setTimeout(typeEffect, 25); // Adjust typing speed here
+            setTimeout(typeEffect, 2); // Adjust typing speed here
         } else {
             typingCursor.style.display = 'inline';
         }
